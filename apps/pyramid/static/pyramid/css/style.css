@@ -9,12 +9,106 @@
 }
 
 .container {
-    width: 970px;
-    height: 900px;
-    margin: 0 auto;
-    font-size: 0px;
-    background-color: yellowgreen;
+    /* padding-top: 100px; */
+    /* height: 500px; */
+    /* background-image: linear-gradient(black 10%, white 90%); */
 }
+
+.smaller-icon{
+    /* display: inline-block; */
+    width: 156px;
+    height: auto;
+}
+
+.no-separation{
+    width: 156px;
+}
+
+.scroll{
+    font-size: 11px;
+    font-weight: 100;
+}
+
+.divider{
+    height: 15px;
+    background-image: linear-gradient(rgb(214, 214, 214) 0%, white 90%);
+}
+
+.orange{
+    color: #ff9900;
+}
+
+input{
+    border: 1px solid black;
+    height: 30px;
+}
+
+.btn {
+    width: 120px;
+    margin-left: 15px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 1px 1px 3px black;
+    background-image: radial-gradient(white 2%, #ff9900);
+}
+
+
+
+
+
+
+footer {
+background-color: #fff;
+}
+
+footer * {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer	.zig-zag-top:before{
+    background: 
+                linear-gradient(-45deg, #ff9900 16px, red 16px, blue 16px,  transparent 0), 
+                linear-gradient(45deg, #ff9900 16px, transparent 0);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: 22px 32px;
+    content: " ";
+    display: block;
+
+    height: 32px;
+    width: 100%;
+
+    position: relative;
+    bottom: 64px;
+    left:0;
+}
+
+footer	div > * {
+    margin: 0 40px;
+}
+
+footer	.zig-zag-top{
+    margin: 32px 0;
+    margin-bottom: 0;
+    background: #ff9900;
+}
+
+footer	.zig-zag-top{
+    padding: 32px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

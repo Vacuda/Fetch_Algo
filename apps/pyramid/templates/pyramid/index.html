@@ -10,26 +10,80 @@
     <title>Fetch Rewards - Adam Sikora</title>
 </head>
 <body>
-    <div class="container">
 
-      
+    <div class="stick-top">
+        <nav class="navbar navbar-light bg-white navbar-expand-md">
+            <a href="/"><img src="../static/pyramid/images/fetch_logo.png" style="width: 150px;" class="hidden-sm hidden-xs navbar-brand" alt="Fetch Rewards logo"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="navbar-collapse collapse justify-content-end">
+                <ul class="nav navbar-nav justify-content-end">
+                    <li class="nav-item"><a href='#' class='nav-link '>How it Works</a></li>
+                    <li class="nav-item"><a href='#' class='nav-link '>Brands</a></li>
+                    <li class="nav-item"><a href='#' class='nav-link '>Rewards</a></li>
+                    <li class="nav-item"><a href='#' class='nav-link '>Invite Friends</a></li>
+                </ul>
+            </div>
+        </nav>
 
-        <h1>Fetch Rewards!</h1>
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="divider"></div>
 
 
     </div>
+
+    <div class="container">
+        <div style="margin-top:7%">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="../static/pyramid/images/groceries.png" class="logo mw-100" alt="Grocery bag with grocery products"/>
+                        </div>
+                        <div class="col-md-6">
+                            <h1>Input a <span class="orange">WORD</span>, please?</h1>
+                            <form action="/input_check" method="POST"> {% csrf_token %}
+                                <input type="text" name="input">
+                                <button class="btn">Fetch!</button>
+                            </form>
+                            <p>Is it a <span class="orange">PYRAMID</span>?</p>
+                                <div class="row">
+                                    <a href="/" class="no-separation" target="_blank">
+                                        <img class="smaller-icon" src="../static/pyramid/images/appstore.png" alt="Download Fetch Rewards in the App Store"/>
+                                    </a>
+
+                                    <a href="/" class="no-separation" target="_blank">
+                                        <img class="smaller-icon" src="../static/pyramid/images/googleplay.png" alt="Download Fetch Rewards in the Play Store"/>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">&nbsp;</div>
+
+        <div class="row">
+            <div class="container">
+                <div class="row d-flex justify-content-center scroll" style="text-align:center">
+                    <p><b>Scroll to Learn More</b></p>
+                </div>
+                <div class="row d-flex justify-content-center" style="text-align:center">
+                    <img src="../static/pyramid/images/arrow_down.png" alt="Scroll down arrow"/>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+        <footer>
+            <div class="zig-zag-top" style="background-color:#ff9900; margin-left: -15px; margin-right: -15px"></div>
+        </footer>
+
+    
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
