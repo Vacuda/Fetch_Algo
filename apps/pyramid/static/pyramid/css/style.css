@@ -36,20 +36,39 @@
 
 .orange{
     color: #ff9900;
+    text-shadow: 0px 1px 0px rgb(224, 125, 12);
 }
 
 input{
     border: 1px solid black;
     height: 30px;
+    background-color: rgb(236, 236, 236);
 }
 
 .btn {
-    width: 120px;
+    width: 140px;
     margin-left: 15px;
+    font-size: 15px;
+    color: white;
+    /* text-shadow: 0px 0px 13px rgb(80, 43, 0); */
     height: 30px;
     border: 1px solid black;
     border-radius: 1px 1px 3px black;
-    background-image: radial-gradient(white 2%, #ff9900);
+    box-shadow: 0px 0px 3px rgb(63, 63, 63);
+    background-color: #ff9900;
+}
+
+.fetch {
+    line-height: 15px;
+}
+
+.result {
+    margin-top: -5px;
+    font-size: 80px;
+}
+
+li {
+    list-style-type: none;
 }
 
 

@@ -44,18 +44,40 @@
                             <h1>Input a <span class="orange">WORD</span>, please?</h1>
                             <form action="/input_check" method="POST"> {% csrf_token %}
                                 <input type="text" name="input">
-                                <button class="btn">Fetch!</button>
+                                <button class="btn fetch">Fetch Result!</button>
                             </form>
                             <p>Is it a <span class="orange">PYRAMID</span>?</p>
-                                <div class="row">
-                                    <a href="/" class="no-separation" target="_blank">
-                                        <img class="smaller-icon" src="../static/pyramid/images/appstore.png" alt="Download Fetch Rewards in the App Store"/>
-                                    </a>
 
-                                    <a href="/" class="no-separation" target="_blank">
-                                        <img class="smaller-icon" src="../static/pyramid/images/googleplay.png" alt="Download Fetch Rewards in the Play Store"/>
-                                    </a>
-                                </div>
+                                {%  if result == None %}
+                                    <div class="row">
+                                        <a href="https://apps.apple.com/app/id1182474649?ign-mpt=uo%3D2" class="no-separation" target="_blank">
+                                            <img class="smaller-icon" src="../static/pyramid/images/appstore.png" alt="Download Fetch Rewards in the App Store"/>
+                                        </a>
+
+                                        <a href="https://play.google.com/store/apps/details?id=com.fetchrewards.fetchrewards.hop&hl=en" class="no-separation" target="_blank">
+                                            <img class="smaller-icon" src="../static/pyramid/images/googleplay.png" alt="Download Fetch Rewards in the Play Store"/>
+                                        </a>
+                                    </div>
+                                {% endif %}
+                                
+                                {% if result == True %}
+                                    <p class="result orange">Pyramid!</p>
+                                    
+                                    {% for key, value in dict.items %}
+                                        <li>{{key}} - {{value}} times</li>
+                                    {% endfor %}
+
+                                {% endif %}
+
+                                {%  if result == False %}
+                                    <p class="result orange">Nope!</p>
+
+                                    {% for key, value in dict.items %}
+                                        <li>"{{key}}" - {{value}} times</li>
+                                    {% endfor %}
+
+                                {% endif %}
+
                         </div>
                     </div>
                 </div>
